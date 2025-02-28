@@ -7,6 +7,7 @@ import { ConfigService } from '@nestjs/config';
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly configService: ConfigService) {
     const jwtSecret = configService.get<string>('JWT_SECRET');
+    console.log('JWT_SECRET:',configService.get<string>('JWT_SECRET'));
 
     if (!jwtSecret) {
       throw new Error('Missing JWT_SECRET in environment variables');
