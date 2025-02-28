@@ -349,9 +349,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d out"
   },
   "keywords": [],
   "author": "",
@@ -361,6 +361,7 @@
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.7.3"
   }
 }
